@@ -34,3 +34,6 @@ B00445	| 1/1/2021 0:36	| 1/1/2021 0:40	| 15  | 252	| B00445
 2. Run the queries you planned 
 3. Refine the model
 4. Populate the full dataset
+
+# See also
+1. [Sample Projects](https://www.projectpro.io/article/real-world-data-engineering-projects-/472) - Requires subscription
