@@ -17,7 +17,7 @@ B00445	| 1/1/2021 0:36	| 1/1/2021 0:40	| 15  | 252	| B00445
 3. We dropped columns other than timestamps and locationid's. They are probably useful but add more complexity than we need to deal with now. We record trips as relationships. Tracking providers would require storing it a as an array parallel to the pickup and drop time arrays.
 4. We didn't write glue scripts to clean the data to reduce the moving parts. That makes the `load csv` complex.
 
-# Queries of Interest
+# TODO: Queries of Interest
 1. In a time interval what are the locations that are destinations of most trips?
 2. What are the busiest routes?
 3. What are the busiest time intervals?
