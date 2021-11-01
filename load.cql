@@ -6,12 +6,12 @@ WHERE NOT row.PULocationID IS NULL
   AND NOT row.pickup_datetime IS NULL
   AND NOT row.dropoff_datetime IS NULL
 
-MERGE (:PULocationID {id: row.PULocationID})-[r:TO]->(:DOLocationID {id: row.DOLocationID})
+MERGE (pu:LocationID {id: row.PULocationID})
+MERGE (do:LocationID {id: row.DOLocationID})
+MERGE (pu)-[r:TO]->(do)
 
 ON CREATE SET r.pickup_datetimes  = [apoc.date.parse(row.pickup_datetime,  "ms", "yyyy-MM-dd hh:mm:ss", 'America/New York')],
               r.dropoff_datetimes = [apoc.date.parse(row.dropoff_datetime, "ms", "yyyy-MM-dd hh:mm:ss",'America/New York')]
 
 ON MATCH SET r.pickup_datetimes  = r.pickup_datetimes  + [apoc.date.parse(row.pickup_datetime, "ms", "yyyy-MM-dd hh:mm:ss", 'America/New York')],
              r.dropoff_datetimes = r.dropoff_datetimes + [apoc.date.parse(row.dropoff_datetime, "ms", "yyyy-MM-dd hh:mm:ss",'America/New York')]
-
-
