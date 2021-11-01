@@ -1,5 +1,5 @@
-# nyctripdata
-NYC trips
+# TLC Trip Record Data
+[CQL](https://github.com/himanshugarg/nyctripdata/blob/main/load.cql) to populate neo4j database with [TLC Trip Record Data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 # Sample
 dispatching_base_num	| pickup_datetime | 	dropoff_datetime	| PULocationID	| DOLocationID	| SR_Flag |	Affiliated_base_number
