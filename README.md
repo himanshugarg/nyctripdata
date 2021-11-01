@@ -12,9 +12,10 @@ B00445	| 1/1/2021 0:27	| 1/1/2021 0:42 | 152 | 16	|	B00445
 B00445	| 1/1/2021 0:36	| 1/1/2021 0:40	| 15  | 252	| B00445
 
 # Design Considerations
-1. The dataset was chosen due to some parallels with a network access data.
+1. We chose this dataset due to some parallels with a network access data.
 2. Nodes represent locations. It represents the real world more closely and also helps writing queries such as which nodes are most frequenly visited. An alternative was to record timestamps as nodes.
-3. Columns other than timestamps and locationid's were dropped. They are probably useful but add more complexity than we need to deal with now. We record trips as relationships. Tracking providers would require storing it a as an array parallel to the pickup and drop time arrays.
+3. We dropped columns other than timestamps and locationid's. They are probably useful but add more complexity than we need to deal with now. We record trips as relationships. Tracking providers would require storing it a as an array parallel to the pickup and drop time arrays.
+4. We didn't write glue scripts to clean the data to reduce the moving parts. That makes the `load csv` complex.
 
 # Queries of Interest
 1. In a time interval what are the locations that are destinations of most trips?
