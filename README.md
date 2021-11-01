@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/2392803/139659140-e259feb0-2a87-474e-b5b8-78b65bac33e7.png)
+
+
 # TLC Trip Record Data
 [CQL](https://github.com/himanshugarg/nyctripdata/blob/main/load.cql) to populate neo4j database with [TLC Trip Record Data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
